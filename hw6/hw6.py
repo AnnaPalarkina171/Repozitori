@@ -2,36 +2,46 @@ import random
 #эта программа генерирует стихотворение танка
 
 def adj1():
-    adjectives = ['Лунный','Сложный','Классный','Странный','Ложный','Страшный','Левый','Правый','Твёрдый','Мягкий','Сладкий','Кислый']
+    with open('one.txt','r', encoding='utf-8') as f:
+        adjectives = f.readlines()
+    adjective = random.choice(adjectives)
 #функция возвращает случайное прилагателное, состоящее из 2х слогов
 #первое слово в первой строке
-    return random.choice(adjectives)
+    return adjective.replace('\n','')
 
 def noun1():
-    nouns = ['философ','диверсант','дивергент','либерал','демократ','металлург','президент','андромед','левитан','коммунист']
+    with open('two.txt','r', encoding='utf-8') as f:
+        nouns = f.readlines()
+    noun = random.choice(nouns)
 #функция возвращает случайное существительное(агенс), состоящее из 3з слогов
 #второе слово в первой строке
-    return random.choice(nouns)
+    return noun.replace('\n','')
 
 
 def verb1():
-    verbs = ['Топчет','Смотрит','Дарит','Делит','Сеет','Ловит','Держит','Клеит','Жует']
+    with open('three.txt','r', encoding='utf-8') as f:
+        verbs = f.readlines()
+    verb = random.choice(verbs)
 #ункция возвращает случайный глагол, состоящий из 2х слогов
 #первое слово во второй строке
-    return random.choice(verbs)
+    return verb.replace('\n','')
 
 def adj2():
-    adjectives = ['лунный','сложный','классный','странный','ложный','страшный','левый','правый','твёрдый','мягкий','сладкий','кислый']
+    with open('four.txt','r', encoding='utf-8') as f:
+        adjectives = f.readlines()
+    adjective = random.choice(adjectives)
 #функция возвращает случайное прилагателное, состоящее из 2х слогов
 #второе слово во второй строке
-    return random.choice(adjectives)
+    return adjective.replace('\n','')
  
 def noun2():
-    nouns = ['самовар','карандаш','самокат','мойонез','ливерпуль','магазин','абажур']
+        with open('five.txt','r', encoding='utf-8') as f:
+            nouns = f.readlines()
+        noun = random.choice(nouns)
 #функция возвращает случайное существительное(пациенс), состоящее из 3з слогов
 #третье слово во второй строке
-    return random.choice(nouns)
-
+        return noun.replace('\n','')
+    
 def punctuation():
     marks = [".", "?", "!", "..."]
     return random.choice(marks)
@@ -39,53 +49,67 @@ def punctuation():
 #конец 2й строки
 
 
-def participle1():
-    part = ['Стонущий','Любящий','Тонущий','Летящий','Бегущий','Плывущий']
+def participe1():
+    with open('six.txt','r', encoding='utf-8') as f:
+        participels = f.readlines()
+    participel = random.choice(participels)  
 #функция возвращает случайное причастие, состоящее из 3з слогов
 #первое слово в третьей строке
-    return random.choice(part)
+    return participel.replace('\n','')
 
 def noun3():
-    nouns = ['олень','комар','медведь','барсук','орёл','идюк']
+    with open('seven.txt','r', encoding='utf-8') as f:
+        nouns = f.readlines()
+        noun = random.choice(nouns)
 #функция возвращает случайное существительное, состоящее из 3х слогов
 #второе слово в третьей строке
-    return random.choice(nouns)
+    return noun.replace('\n','')
 
 def verb2():
-    verbs = ['Cтоит','Гремит','Лежит','Молчит','Шумит']
+    with open('eight.txt','r', encoding='utf-8') as f:
+        verbs = f.readlines()
+        verb = random.choice(verbs)
 #функция возвращает случайный глагол, состоящий из 2х слогов
 #первое слово в четвертой строке
-    return random.choice(verbs)
+    return verb.replace('\n','')
 
 def verb3():
-    verbs = ['Увидишь','Услышишь']
-    return random.choice(verbs)
+    with open('nine.txt','r', encoding='utf-8') as f:
+        verbs = f.readlines()
+    verb = random.choice(verbs)
 #функция возвращает случайный глагол, состоящий из 3х слогов
 #второе слово в четвертой строке
+    return verb.replace('\n','')
 
 def interjections():
-    inter = ['ли','же','ох','ух','ах']
-    return random.choice(inter)
+    with open('ten.txt','r', encoding='utf-8') as f:
+        interjections =  f.readlines()
+    interjector = random.choice(interjections)
 #функция возвращает случайное междометие из 1го слога
 #третье слово в четвертой строке
+    return interjector.replace('\n','')
 
 
 def adj3():
-    adj = ['шикарный','красивый','зеленый','пурпурный','лимонный','туманный']
-    return random.choice(adj)
+    with open('eleven.txt','r', encoding='utf-8') as f:
+        adjs = f.readlines()
+    adj = random.choice(adjs)
 #функция возвращает случайное прилагательное из 3х слога
 #второе слово в пятой строке
+    return adj.replace('\n','')
 
 def noun4():
-    nouns = ['закат','рассвет','прилив','залив','пейзаж','этюд',]
-    return random.choice(nouns)
+    with open('twelve.txt','r', encoding='utf-8') as f:
+        nouns = f.readlines()
+    noun = random.choice(nouns)
 #функция возвращает случайное существительное из 2х слогов
 #третье слово в пятой строке
+    return noun.replace('\n','')
 
 
 
 def vers1():
-    return adj1() + ' ' + noun1()
+    return adj1() + noun1()
 print(vers1())
 
 def vers2():
@@ -93,7 +117,7 @@ def vers2():
 print(vers2())
 
 def vers3():
-    return participle1() + ' ' + noun3() + ','
+    return participe1() + ' ' + noun3() + ','
 print(vers3())
 
 def vers4():

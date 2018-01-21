@@ -117,7 +117,7 @@ def vers2():
 print(vers2())
 
 def vers3():
-    return participe1() + ' ' + noun3() + ','
+    return participe1() + ' ' + noun3() 
 print(vers3())
 
 def vers4():

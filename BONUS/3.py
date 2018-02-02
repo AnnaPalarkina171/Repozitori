@@ -1,3 +1,4 @@
+
 n = input('Enter sth: ')
 s = n.split()
 for i in s:

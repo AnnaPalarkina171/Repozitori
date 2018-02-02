@@ -1,4 +1,3 @@
-
 n = input('Enter sth: ')
 alf = 'qwrtpsdfghjklzxcvbnm'
 for i in n:

@@ -10,5 +10,5 @@ for character in s:
         for letter in alphavite:
              if letter == character:
                 new_s += alphavite[(j + shift)%len(alphavite)]
-                     j += 1
+                j += 1
     print(new_s)

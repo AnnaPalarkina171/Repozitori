@@ -9,7 +9,6 @@ with open('birds.html', encoding='utf-8') as f:
     text = re.sub('птицам','рыбам',text)
     text = re.sub('птицу','рыбу',text)
     text = re.sub('птицей','рыбой',text)
-    text = re.sub('птицею','рыбою',text)
     text = re.sub('птицами','рыбами',text)
     text = re.sub('птицах','рыбах',text)
 
@@ -20,11 +19,9 @@ with open('birds.html', encoding='utf-8') as f:
     text = re.sub('Птицам','Рыбам',text)
     text = re.sub('Птицу','Рыбу',text)
     text = re.sub('Птицей','Рыбой',text)
-    text = re.sub('Птицею','Рыбою',text)
     text = re.sub('Птицами','Рыбами',text)
     text = re.sub('Птицах','Рыбах',text)
 
     with open('fish.txt','w',encoding='utf-8') as f:
         f.write(text)
 
-#очень тупо. А ещё я не знаю, что делать, чтобы регистр первых букв оставался

@@ -19,32 +19,22 @@ def lens(main_name):
     
 def big(l):
     val = []
+    needed_folders = []
     for x in l:
         v = x[1]
         val.append(v)
     m = max(val)
     for x in l:
         if x[1] == m:
-            return x[0]
+            needed_folders.append(x[0])     
+    return needed_folders
           
 
 def main():
-    print(big(lens(cwd())))
+    print('Папка, в которой больше всего файлов',big(lens(cwd())))
 main()
     
-    
-
-
-
-    
-
-
-#for name, folders, files in os.walk(main_name):
-    #len_f = len(files)
-    #print('In %s: %s files' % (name, len_f))
-    #l.append(len_f)
 
 
     
-#if len_f == max(l):
-    #print(name)
+

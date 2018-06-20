@@ -34,8 +34,8 @@ for x in files:
                             for x in s_lex:
                                 d_s[x] = num_s
                                 if num_s == num_n +1:
-                                    t.write('{}{}{}{}'.format(no,';',s_lex,'\n'))
-                                    print('{}{}{}'.format(no,';',s_lex))
+                                    t.write('{}{}{}{}{}{}{}{}'.format(doc_id,'\t',no,';',s_lex,'\t',topic,'\n'))
+                                    print('{}{}{}{}{}{}{}{}'.format(doc_id,'\t',no,';',s_lex,'\t',topic,'\n'))
 
                             
             
